@@ -4,7 +4,7 @@
 #include "Globals.h"
 
 
-#define NUM_MODULES 7
+#define NUM_MODULES 8
 
 
 class ModuleWindow;
@@ -14,6 +14,7 @@ class ModuleRender;
 class ModuleFadeToBlack;
 class ModuleAudio;
 class ModuleCollision;
+class ModuleFonts;
 class Module;
 
 
@@ -30,6 +31,7 @@ public:
 	ModuleFadeToBlack* fade;
 	ModuleAudio* audio;
 	ModuleCollision* collisions;
+	ModuleFonts* fonts;
 	
 
 

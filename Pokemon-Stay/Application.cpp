@@ -6,6 +6,7 @@
 #include "ModuleFadeToBlack.h"
 #include "ModuleAudio.h"
 #include "ModuleCollision.h"
+#include "ModuleFonts.h"
 
 
 Application::Application()
@@ -15,10 +16,10 @@ Application::Application()
 	modules[2] = input = new ModuleInput();
 	modules[3] = textures = new ModuleTextures();
 	modules[4] = audio = new ModuleAudio(); // audio must be befor all the scenes
-	modules[5] = collisions = new ModuleCollision();
-	modules[6] = fade = new ModuleFadeToBlack(); // Fade Module must be after the scenes
-	
-	
+	modules[5] = fonts = new ModuleFonts();
+	modules[6] = collisions = new ModuleCollision();
+	modules[7] = fade = new ModuleFadeToBlack(); // Fade Module must be after the scenes
+
 }	
 
 Application::~Application()

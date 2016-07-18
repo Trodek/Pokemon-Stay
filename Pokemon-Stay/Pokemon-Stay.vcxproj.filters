@@ -45,6 +45,9 @@
     <ClCompile Include="ModuleWindow.cpp">
       <Filter>Modules\Core</Filter>
     </ClCompile>
+    <ClCompile Include="ModuleFonts.cpp">
+      <Filter>Modules\Core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h">
@@ -84,6 +87,9 @@
       <Filter>Modules\Core</Filter>
     </ClInclude>
     <ClInclude Include="ModuleWindow.h">
+      <Filter>Modules\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleFonts.h">
       <Filter>Modules\Core</Filter>
     </ClInclude>
   </ItemGroup>
