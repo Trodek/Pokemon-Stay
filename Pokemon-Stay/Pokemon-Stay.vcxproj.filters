@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Basic">
+      <UniqueIdentifier>{ddab55e1-14fb-4592-b888-fe63755f9743}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules">
+      <UniqueIdentifier>{7b45912f-a819-4473-9fe1-47ab3f71a68e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Containers">
+      <UniqueIdentifier>{7a208067-2efd-4aa1-8740-7d412bafb92d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\Core">
+      <UniqueIdentifier>{7b74b57f-7542-4b45-8e71-1fa22d6a9603}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Application.cpp">
+      <Filter>Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="Globals.cpp">
+      <Filter>Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleAudio.cpp">
+      <Filter>Modules\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleCollision.cpp">
+      <Filter>Modules\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleFadeToBlack.cpp">
+      <Filter>Modules\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleInput.cpp">
+      <Filter>Modules\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleRender.cpp">
+      <Filter>Modules\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleTextures.cpp">
+      <Filter>Modules\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleWindow.cpp">
+      <Filter>Modules\Core</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Application.h">
+      <Filter>Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="Globals.h">
+      <Filter>Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="MemLeaks.h">
+      <Filter>Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="dynArray.h">
+      <Filter>Containers</Filter>
+    </ClInclude>
+    <ClInclude Include="Point2D.h">
+      <Filter>Containers</Filter>
+    </ClInclude>
+    <ClInclude Include="Module.h">
+      <Filter>Modules\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleAudio.h">
+      <Filter>Modules\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleCollision.h">
+      <Filter>Modules\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleFadeToBlack.h">
+      <Filter>Modules\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleInput.h">
+      <Filter>Modules\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleRender.h">
+      <Filter>Modules\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleTextures.h">
+      <Filter>Modules\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleWindow.h">
+      <Filter>Modules\Core</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
