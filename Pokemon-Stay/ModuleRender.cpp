@@ -50,19 +50,49 @@ update_status ModuleRender::PreUpdate()
 
 update_status ModuleRender::Update()	
 {
-	int speed = 100;
+	int speed = TILE_SIZE;
 
-	if (App->input->keyboard[SDL_SCANCODE_UP] == KEY_STATE::KEY_REPEAT)
+	if (App->input->keyboard[SDL_SCANCODE_UP] == KEY_STATE::KEY_REPEAT){
 		camera.y += speed;
+		if (camera.y % TILE_SIZE != 0){
+			if (camera.y % TILE_SIZE < TILE_SIZE/2){
+				camera.y -= camera.y % TILE_SIZE;
+			}
+			else camera.y += camera.y % TILE_SIZE;
+		}
+	}
 
-	if (App->input->keyboard[SDL_SCANCODE_DOWN] == KEY_STATE::KEY_REPEAT)
+	if (App->input->keyboard[SDL_SCANCODE_DOWN] == KEY_STATE::KEY_REPEAT){
 		camera.y -= speed;
+		if (camera.y % TILE_SIZE != 0){
+			if (camera.y % TILE_SIZE < TILE_SIZE/2){
+				camera.y -= camera.y % TILE_SIZE;
+			}
+			else camera.y += camera.y % TILE_SIZE;
+		}
+	}
 
-	if (App->input->keyboard[SDL_SCANCODE_LEFT] == KEY_STATE::KEY_REPEAT)
+	if (App->input->keyboard[SDL_SCANCODE_LEFT] == KEY_STATE::KEY_REPEAT){
 		camera.x += speed;
+		if (camera.x % TILE_SIZE != 0){
+			if (camera.x % TILE_SIZE < TILE_SIZE/2){
+				camera.x -= camera.x % TILE_SIZE;
+			}
+			else camera.x += camera.x % TILE_SIZE;
+		}
+	}
+	
 
-	if (App->input->keyboard[SDL_SCANCODE_RIGHT] == KEY_STATE::KEY_REPEAT)
+	if (App->input->keyboard[SDL_SCANCODE_RIGHT] == KEY_STATE::KEY_REPEAT){
 		camera.x -= speed;
+		if (camera.x % TILE_SIZE != 0){
+			if (camera.x % TILE_SIZE < TILE_SIZE/2){
+				camera.x -= camera.x % TILE_SIZE;
+			}
+			else camera.x += camera.x % TILE_SIZE;
+		}
+	
+	}
 
 	return update_status::UPDATE_CONTINUE;
 }

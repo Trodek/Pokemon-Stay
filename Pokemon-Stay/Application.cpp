@@ -7,6 +7,7 @@
 #include "ModuleAudio.h"
 #include "ModuleCollision.h"
 #include "ModuleFonts.h"
+#include "ModuleWorld.h"
 
 
 Application::Application()
@@ -17,8 +18,9 @@ Application::Application()
 	modules[3] = textures = new ModuleTextures();
 	modules[4] = audio = new ModuleAudio(); // audio must be befor all the scenes
 	modules[5] = fonts = new ModuleFonts();
-	modules[6] = collisions = new ModuleCollision();
-	modules[7] = fade = new ModuleFadeToBlack(); // Fade Module must be after the scenes
+	modules[6] = world = new ModuleWorld();
+	modules[7] = collisions = new ModuleCollision();
+	modules[8] = fade = new ModuleFadeToBlack(); // Fade Module must be after the scenes
 
 }	
 

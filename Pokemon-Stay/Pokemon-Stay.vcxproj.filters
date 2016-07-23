@@ -13,6 +13,9 @@
     <Filter Include="Modules\Core">
       <UniqueIdentifier>{7b74b57f-7542-4b45-8e71-1fa22d6a9603}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Modules\Scenes">
+      <UniqueIdentifier>{f948ec70-b62a-4887-9e9b-173ee2efa7ce}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp">
@@ -47,6 +50,12 @@
     </ClCompile>
     <ClCompile Include="ModuleFonts.cpp">
       <Filter>Modules\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="World.cpp">
+      <Filter>Containers</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleWorld.cpp">
+      <Filter>Modules\Scenes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -91,6 +100,15 @@
     </ClInclude>
     <ClInclude Include="ModuleFonts.h">
       <Filter>Modules\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="MyString.h">
+      <Filter>Containers</Filter>
+    </ClInclude>
+    <ClInclude Include="World.h">
+      <Filter>Containers</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleWorld.h">
+      <Filter>Modules\Scenes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

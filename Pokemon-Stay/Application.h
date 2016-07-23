@@ -4,9 +4,9 @@
 #include "Globals.h"
 
 
-#define NUM_MODULES 8
+#define NUM_MODULES 9
 
-
+// Basic
 class ModuleWindow;
 class ModuleInput;
 class ModuleTextures;
@@ -17,7 +17,8 @@ class ModuleCollision;
 class ModuleFonts;
 class Module;
 
-
+// Scenes
+class ModuleWorld;
 
 class Application
 {
@@ -32,6 +33,7 @@ public:
 	ModuleAudio* audio;
 	ModuleCollision* collisions;
 	ModuleFonts* fonts;
+	ModuleWorld* world;
 	
 
 
