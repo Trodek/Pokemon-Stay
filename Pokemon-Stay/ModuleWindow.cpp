@@ -57,6 +57,9 @@ bool ModuleWindow::Init()
 		}
 	}
 
+	icon = SDL_LoadBMP("PokemonStay/Sprites/Icon/Icon.bmp");
+	SDL_SetWindowIcon(window, icon);
+
 	return ret;
 }
 

@@ -16,6 +16,15 @@ enum update_status
 	UPDATE_ERROR
 };
 
+enum Directions
+{
+	UP,
+	RIGHT,
+	DOWN,
+	LEFT,
+	MAX_DIR
+};
+
 // Useful typedefs ---------
 typedef unsigned int uint;
 
