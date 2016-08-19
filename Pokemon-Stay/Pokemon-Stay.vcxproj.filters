@@ -19,6 +19,9 @@
     <Filter Include="Modules\Player">
       <UniqueIdentifier>{5f4a5bde-aa7e-4ceb-bc47-c403dc4c9ed8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Modules\Pokemons">
+      <UniqueIdentifier>{e49cd660-a6ce-4a2c-82f0-434fc6234189}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp">
@@ -62,6 +65,9 @@
     </ClCompile>
     <ClCompile Include="ModulePlayer.cpp">
       <Filter>Modules\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="ModulePokemons.cpp">
+      <Filter>Modules\Pokemons</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -121,6 +127,12 @@
     </ClInclude>
     <ClInclude Include="Animation.h">
       <Filter>Containers</Filter>
+    </ClInclude>
+    <ClInclude Include="Pokemon.h">
+      <Filter>Modules\Pokemons</Filter>
+    </ClInclude>
+    <ClInclude Include="ModulePokemons.h">
+      <Filter>Modules\Pokemons</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

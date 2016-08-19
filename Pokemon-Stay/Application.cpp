@@ -8,9 +8,11 @@
 #include "ModuleAudio.h"
 #include "ModuleCollision.h"
 #include "ModuleFonts.h"
-// Scenes/player
+
+// Game Logic
 #include "ModuleWorld.h"
 #include "ModulePlayer.h"
+#include "ModulePokemons.h"
 
 
 Application::Application()
@@ -22,9 +24,10 @@ Application::Application()
 	modules[4] = audio = new ModuleAudio(); // audio must be befor all the scenes
 	modules[5] = fonts = new ModuleFonts();
 	modules[6] = world = new ModuleWorld();
-	modules[7] = player = new ModulePlayer();
-	modules[8] = collisions = new ModuleCollision();
-	modules[9] = fade = new ModuleFadeToBlack(); // Fade Module must be after the scenes
+	modules[7] = pokemons = new ModulePokemons();
+	modules[8] = player = new ModulePlayer();
+	modules[9] = collisions = new ModuleCollision();
+	modules[10] = fade = new ModuleFadeToBlack(); // Fade Module must be after the scenes
 
 }	
 

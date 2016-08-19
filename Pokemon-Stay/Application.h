@@ -4,7 +4,7 @@
 #include "Globals.h"
 
 
-#define NUM_MODULES 10
+#define NUM_MODULES 11
 
 // Basic
 class ModuleWindow;
@@ -17,9 +17,10 @@ class ModuleCollision;
 class ModuleFonts;
 class Module;
 
-// Scenes
+// Game Logic
 class ModuleWorld;
 class ModulePlayer;
+class ModulePokemons;
 
 class Application
 {
@@ -36,6 +37,7 @@ public:
 	ModuleFonts* fonts;
 	ModuleWorld* world;
 	ModulePlayer* player;
+	ModulePokemons* pokemons;
 
 public:
 
