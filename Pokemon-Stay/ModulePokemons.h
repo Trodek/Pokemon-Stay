@@ -101,6 +101,7 @@ private:
 public:
 	ModulePokemons();
 	bool Start();
+	bool CleanUp();
 
 
 private:

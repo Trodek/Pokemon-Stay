@@ -52,6 +52,9 @@ bool ModulePlayer::Start(){
 }
 
 bool ModulePlayer::CleanUp(){
+
+	LOG("Player CleanUp ......")
+
 	App->textures->Unload(Character_tex);
 
 	return true;
