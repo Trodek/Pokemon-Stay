@@ -12,6 +12,7 @@ struct SDL_Texture;
 class ModulePlayer :public Module{
 public:
 	iPoint current_pos, world_pos, target_pos;
+	uint level = 1;
 
 private:
 	SDL_Texture* Character_tex;
@@ -34,6 +35,7 @@ private:
 	iPoint ConvertToWorld(iPoint& pos);
 	SDL_Rect* GetRectToprint();
 	void SetInitialCameraView();
+	bool CanMove();
 };
 
 #endif

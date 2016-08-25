@@ -67,7 +67,7 @@ update_status ModulePlayer::Update(){
 			target_dir = RIGHT;
 			key_used = true;
 			if (target_dir == current_dir && current_pos.x < App->world->World->width-1){
-				if (*(App->world->World->zonemap + current_pos.x + 1 + current_pos.y*App->world->World->width))
+				if (CanMove())
 					target_pos.x += 1;
 			}
 			else{
@@ -78,7 +78,7 @@ update_status ModulePlayer::Update(){
 			target_dir = LEFT;
 			key_used = true;
 			if (target_dir == current_dir && current_pos.x > 0){
-				if (*(App->world->World->zonemap + current_pos.x - 1 + current_pos.y*App->world->World->width))
+				if (CanMove())
 					target_pos.x -= 1;
 			}
 			else{
@@ -89,7 +89,7 @@ update_status ModulePlayer::Update(){
 			target_dir = UP;
 			key_used = true;
 			if (target_dir == current_dir && current_pos.y > 0){
-				if (*(App->world->World->zonemap + current_pos.x + (current_pos.y-1)*App->world->World->width))
+				if (CanMove())
 					target_pos.y -= 1;
 			}
 			else{
@@ -100,7 +100,7 @@ update_status ModulePlayer::Update(){
 			target_dir = DOWN;
 			key_used = true;
 			if (target_dir == current_dir && current_pos.y < App->world->World->height-1){
-				if (*(App->world->World->zonemap + current_pos.x + (current_pos.y + 1)*App->world->World->width))
+				if (CanMove())
 					target_pos.y += 1;
 			}
 			else{
@@ -190,4 +190,26 @@ SDL_Rect* ModulePlayer::GetRectToprint(){
 void ModulePlayer::SetInitialCameraView(){
 	App->render->camera.x = -(current_pos.x*TILE_SIZE - 14 * TILE_SIZE);
 	App->render->camera.y = -(current_pos.y*TILE_SIZE - 10 * TILE_SIZE);
+}
+
+bool ModulePlayer::CanMove(){
+	bool ret = true;
+
+	switch (current_dir)
+	{
+	case UP:
+		if (*(App->world->World->zonemap + current_pos.x + (current_pos.y - 1)*App->world->World->width) < 10) ret = false;
+		break;
+	case RIGHT:
+		if (*(App->world->World->zonemap + current_pos.x + 1 + current_pos.y*App->world->World->width) < 10) ret = false;
+		break;
+	case DOWN:
+		if (*(App->world->World->zonemap + current_pos.x + (current_pos.y + 1)*App->world->World->width) < 10) ret = false;
+		break;
+	case LEFT:
+		if (*(App->world->World->zonemap + current_pos.x - 1 + current_pos.y*App->world->World->width) < 10) ret = false;
+		break;
+	}
+
+	return ret;
 }

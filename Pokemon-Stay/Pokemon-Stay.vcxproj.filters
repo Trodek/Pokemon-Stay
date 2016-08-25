@@ -134,5 +134,8 @@
     <ClInclude Include="ModulePokemons.h">
       <Filter>Modules\Pokemons</Filter>
     </ClInclude>
+    <ClInclude Include="PokemonEevee.h">
+      <Filter>Modules\Pokemons</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

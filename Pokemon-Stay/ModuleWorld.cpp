@@ -10,7 +10,7 @@ ModuleWorld::ModuleWorld(){
 	Tile.w = TILE_SIZE;
 	Tile.x = 0;
 	Tile.y = 0;
-	World = new RandomWorld(250);
+	World = new RandomWorld(WORLD_SIZE);
 }
 
 ModuleWorld::~ModuleWorld(){

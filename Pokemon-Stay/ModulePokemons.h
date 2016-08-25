@@ -5,6 +5,8 @@
 #include "Application.h"
 #include "Module.h"
 
+#define POKEMON_DIVISIOR 5
+
 enum Pokemons{
 	None,
 	Bulbasaur, Ivysaur, Venusaur,
@@ -87,9 +89,15 @@ enum Pokemons{
 	Dratini, Dragonair, Dragonite,
 	Mewtwo,
 	Mew,
+	Max_Pokemons,
+};
+
+enum Types{
+	Normal, Plant, Fire, Electric, Water, Rock, Psiquic, Ice, Dragon, Poison
 };
 
 struct SDL_Texture;
+class Pokemon;
 
 class ModulePokemons : public Module{
 public:
@@ -97,14 +105,22 @@ public:
 	SDL_Texture* Pokemon_siluets;
 
 private:
+	Pokemon* spawned[WORLD_SIZE / POKEMON_DIVISIOR];
+	uint count = 0;
 
 public:
 	ModulePokemons();
 	bool Start();
+	update_status Update();
 	bool CleanUp();
 
 
 private:
+	bool SpawnPokemon();
+	Pokemons PokemonToSpawn(Pokemons& random_pokemon);
+	bool IsLegendary(Pokemons& pokemon);
+	bool IsSecondEvolution(Pokemons& pokemon);
+	bool IsEvolution(Pokemons& pokemon);
 
 };
 

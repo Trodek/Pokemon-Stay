@@ -61,13 +61,13 @@ update_status Application::Update()
 	update_status ret = UPDATE_CONTINUE;
 
 	for(int i = 0; i < NUM_MODULES && ret == UPDATE_CONTINUE; ++i)
-		ret = modules[i]->IsEnabled() ? modules[i]->PreUpdate() : UPDATE_CONTINUE;
+		ret = (modules[i]->IsEnabled() && !modules[i]->IsPaused()) ? modules[i]->PreUpdate() : UPDATE_CONTINUE;
 
 	for(int i = 0; i < NUM_MODULES && ret == UPDATE_CONTINUE; ++i)
-		ret = modules[i]->IsEnabled() ? modules[i]->Update() : UPDATE_CONTINUE;
+		ret = (modules[i]->IsEnabled() && !modules[i]->IsPaused()) ? modules[i]->Update() : UPDATE_CONTINUE;
 
 	for(int i = 0; i < NUM_MODULES && ret == UPDATE_CONTINUE; ++i)
-		ret = modules[i]->IsEnabled() ? modules[i]->PostUpdate() : UPDATE_CONTINUE;
+		ret = (modules[i]->IsEnabled() && !modules[i]->IsPaused()) ? modules[i]->PostUpdate() : UPDATE_CONTINUE;
 
 	return ret;
 }

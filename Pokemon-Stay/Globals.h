@@ -42,6 +42,7 @@ typedef unsigned int uint;
 // Usefull define values -----------
 
 #define TILE_SIZE 32
+#define WORLD_SIZE 250
 
 #endif // __GLOBALS_H__
 

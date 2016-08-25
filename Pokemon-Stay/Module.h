@@ -9,6 +9,7 @@ class Module
 {
 private:
 	bool enabled = true;
+	bool paused = false;
 
 public:
 	virtual ~Module() {}
@@ -21,6 +22,7 @@ public:
 	virtual bool CleanUp()				{ return true; }
 		
 	bool IsEnabled() const				{ return enabled; }
+	bool IsPaused() const				{ return paused; }
 
 	void Enable()
 	{
@@ -36,6 +38,18 @@ public:
 		if (enabled == true){
 			enabled =false;
 			CleanUp();
+		}
+	}
+
+	void Pause(){
+		if (paused == false){
+			paused = true;
+		}
+	}
+
+	void Continue(){
+		if (paused == true){
+			paused = false;
 		}
 	}
 
